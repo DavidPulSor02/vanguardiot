@@ -1,0 +1,27 @@
+ion-list {
+    min-width: 250px; // Se amplía el ancho mínimo para mejor visibilidad
+    max-width: 300px; // Se establece un máximo para evitar que sea muy grande
+    border-radius: 10px; // Bordes redondeados
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); // Sombra sutil para destacar
+    background: rgb(0, 0, 0);
+    padding: 10px; // Espaciado interno
+}
+
+ion-item {
+    font-size: 1rem; // Tamaño de fuente mejorado
+    padding: 12px; // Más espaciado interno
+    transition: background 0.2s ease-in-out; // Animación de fondo suave
+    border-radius: 5px; // Bordes redondeados en cada item
+}
+
+ion-item:hover,
+ion-item:active {
+    background: #f1f1f1; // Efecto de hover/click
+}
+
+/* Ajustes para el botón de cerrar */
+ion-button {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 0.9rem;
+}

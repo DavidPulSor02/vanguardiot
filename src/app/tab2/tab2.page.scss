@@ -1,0 +1,91 @@
+/* Estilos generales */
+ion-content {
+    --background: #1b1e26;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Contenedor del grid */
+.device-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 15px 20px;
+}
+
+/* Tarjeta de cada dispositivo */
+.device-card {
+    background: #292c36;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
+    position: relative;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease-in-out;
+}
+
+/* Efecto hover */
+.device-card:hover {
+    background: #323543;
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 16px rgba(0, 255, 153, 0.3);
+}
+
+/* Iconos */
+.device-card ion-icon {
+    font-size: 36px;
+    color: #00ff99;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+/* Información del dispositivo */
+.device-info {
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.device-info p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.device-info small {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* Estilos del interruptor */
+ion-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    --handle-background: white;
+    --background: #555;
+    --background-checked: #00ff99;
+    width: 50px;
+    height: 25px;
+    border-radius: 20px;
+    transition: background 0.3s ease-in-out;
+}
+
+ion-toggle::part(track) {
+    border-radius: 20px;
+    height: 20px;
+}
+
+ion-toggle::part(handle) {
+    transition: transform 0.3s ease;
+    width: 20px;
+    height: 20px;
+}
+
+ion-toggle:checked::part(handle) {
+    transform: translateX(25px);
+}

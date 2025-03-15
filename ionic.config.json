@@ -1,0 +1,7 @@
+{
+  "name": "vanguardIot",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

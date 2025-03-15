@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Actividad</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="dark-theme">
+  <div class="filters">
+    <ion-button fill="outline" shape="round">
+      {{ filterType }}
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="outline" shape="round">
+      {{ selectedDate }}
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div *ngFor="let activity of activities">
+    <h3 class="date-title">{{ activity.date }}</h3>
+    <div class="event-card" *ngIf="activity.events.length === 0">
+      <ion-icon name="ban-outline"></ion-icon>
+      <p>No se grabó ningún evento</p>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-tab-bar>

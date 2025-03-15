@@ -1,0 +1,41 @@
+.dark-theme {
+    --background: #121212;
+    --color: white;
+    padding: 16px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.date-title {
+    color: white;
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.event-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #232323;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+ion-tab-bar {
+    background: #121212;
+    border-top: 1px solid #232323;
+}
+
+ion-tab-button {
+    color: white;
+}
+
+ion-tab-button.active {
+    color: #007aff;
+}

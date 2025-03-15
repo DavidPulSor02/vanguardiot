@@ -1,0 +1,59 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-title>Vanguard</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openNotifications($event)">
+        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Sección de estadísticas -->
+  <div class="stats">
+    <ion-card class="stat-card" (click)="navigateTo('machines')">
+      <ion-icon name="thermometer-outline"></ion-icon>
+      <p>27°C</p>
+      <small>Máquinas</small>
+    </ion-card>
+
+    <ion-card class="stat-card" (click)="navigateTo('devices')">
+      <ion-icon name="laptop-outline"></ion-icon>
+      <p>13</p>
+      <small>Dispositivos</small>
+    </ion-card>
+  </div>
+
+
+  <!-- Sección de habitaciones -->
+  <div class="rooms">
+    <h3>Habitaciones</h3>
+
+    <div class="room-card" [routerLink]="['/oficina']">
+      <ion-icon name="desktop-outline"></ion-icon>
+      <div class="room-info">
+        <p>Oficina</p>
+        <small>5 Dispositivos | 1 Encendido</small>
+      </div>
+    </div>
+
+    <div class="room-card" [routerLink]="['/maquinas']">
+      <ion-icon name="construct-outline"></ion-icon>
+      <div class="room-info">
+        <p>Máquinas</p>
+        <small>8 Dispositivos | 5 Encendidos</small>
+      </div>
+    </div>
+
+    <div class="room-card" [routerLink]="['/bodega']">
+      <ion-icon name="albums-outline"></ion-icon>
+      <div class="room-info">
+        <p>Bodega</p>
+        <small>5 Dispositivos | 1 Encendido</small>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
