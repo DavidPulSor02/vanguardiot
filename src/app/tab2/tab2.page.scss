@@ -2,7 +2,7 @@
 ion-content {
     --background: #1b1e26;
     color: white;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Kanit-Black', sans-serif;
 }
 
 /* Contenedor del grid */
@@ -22,7 +22,7 @@ ion-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 120px;
+    height: auto;
     position: relative;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, background 0.3s ease-in-out;
@@ -46,6 +46,7 @@ ion-content {
 
 /* Información del dispositivo */
 .device-info {
+    font-size: 'Kanit-Bold', sans-serif;
     margin-top: 40px;
     margin-left: 10px;
 }
@@ -59,6 +60,10 @@ ion-content {
 .device-info small {
     font-size: 0.8rem;
     color: #aaa;
+}
+
+h3{
+    margin-left: 20px;
 }
 
 /* Estilos del interruptor */

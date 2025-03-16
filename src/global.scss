@@ -52,3 +52,18 @@ ion-tab {
         transform: translateX(0);
     }
 }
+
+@font-face {
+    font-family: 'MiFuente';
+    src: url('assets/fonts/Kanit-Black.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'MiFuente';
+    src: url('assets/fonts/Kanit-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
