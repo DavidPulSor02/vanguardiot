@@ -15,7 +15,6 @@ ion-content {
 }
 
 /* 📱 Tarjetas de dispositivos */
-/* 📦 Estilos de la tarjeta */
 .device-card {
     background: #1e2027;
     padding: 22px;
@@ -23,50 +22,92 @@ ion-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 120px;
+    height: 140px;
     position: relative;
     transition: background 0.25s ease-in-out, transform 0.2s ease;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-/* ✨ Sombra y efecto hover sutil */
+/* ✨ Sombra y efecto hover */
 .device-card:hover {
     background: #262830;
     transform: translateY(-3px);
-    box-shadow: 0px 6px 12px rgba(0, 255, 153, 0.15);
+    box-shadow: 0px 8px 16px rgba(0, 255, 153, 0.2);
 }
 
-/* 🔹 Iconos dentro de la tarjeta */
+/* 🔹 Icono centrado dentro de la tarjeta */
 .device-card ion-icon {
-    font-size: 32px;
-    color: #00ff99;
-    position: absolute;
-    top: 12px;
-    left: 12px;
+    font-size: 40px;
+    color: #4eff7a;
     transition: color 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    /* Centrado horizontal */
 }
 
 /* 🚀 Cambio de color en hover */
 .device-card:hover ion-icon {
-    color: #00d488;
+    color: #4eff7a;
 }
 
 /* ℹ Información del dispositivo */
-.device-info {
-    margin-top: 40px;
-    margin-left: 10px;
-}
-
 .device-info p {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #ffffff;
-    margin-bottom: 2px;
+    margin-bottom: 5px;
 }
 
 .device-info small {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     color: #b0b3ba;
+}
+
+/* 🎛 Estilos del interruptor */
+ion-toggle {
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    --handle-background: white;
+    --handle-width: 22px;
+    --handle-height: 22px;
+    --handle-border-radius: 50%;
+    --background: #3a3d46;
+    --background-checked: linear-gradient(135deg, #00ffa2, #00b377);
+    --border-radius: 14px;
+    width: 50px;
+    height: 26px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 255, 153, 0.15);
+}
+
+/* 🔘 Track del interruptor */
+ion-toggle::part(track) {
+    border-radius: 14px;
+    height: 22px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* 🔘 Tamaño del botón del interruptor */
+ion-toggle::part(handle) {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🚀 Efecto cuando el interruptor está activado */
+ion-toggle:checked {
+    box-shadow: 0px 0px 12px rgba(0, 255, 153, 0.4);
+}
+
+ion-toggle:checked::part(handle) {
+    transform: translateX(24px);
+    box-shadow: 0px 0px 10px rgba(0, 255, 153, 0.5);
 }
 
 /* 🌙 Modo oscuro mejorado */
@@ -78,39 +119,4 @@ ion-content {
     .device-card:hover {
         background: #21232a;
     }
-}
-/* 🎛 Estilos del interruptor mejorado */
-ion-toggle {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    --handle-background: white;
-    --handle-width: 18px;
-    --handle-height: 18px;
-    --handle-border-radius: 50%;
-    --background: #3a3d46;
-    --background-checked: linear-gradient(135deg, #00ffa2, #00b377);
-    --border-radius: 14px;
-    width: 42px;
-    height: 22px;
-    transition: all 0.3s ease-in-out;
-}
-
-/* 🔘 Track del interruptor (mejor alineado) */
-ion-toggle::part(track) {
-    border-radius: 14px;
-    height: 18px;
-    transition: background 0.3s ease-in-out;
-}
-
-/* 🔘 Tamaño del botón del interruptor */
-ion-toggle::part(handle) {
-    width: 16px;
-    height: 16px;
-    transition: transform 0.3s ease;
-}
-
-/* 🚀 Efecto cuando el interruptor está activado */
-ion-toggle:checked::part(handle) {
-    transform: translateX(20px);
 }

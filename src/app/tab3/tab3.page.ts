@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
 
+interface Event {
+  description: string;
+}
+
+interface Activity {
+  date: string;
+  events: Event[];
+}
+
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -7,14 +16,38 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class Tab3Page {
-  filterType = 'Eventos';
-  selectedDate: string = 'Fecha';
-
-  activities = [
-    { date: 'Hoy', events: [] },
-    { date: 'Ayer', events: [] },
-    { date: 'mié, 12 mar', events: [] },
-    { date: 'mar, 11 mar', events: [] },
-    { date: 'lun, 10 mar', events: [] }
+  activities: Activity[] = [
+    {
+      date: '2024-03-15',
+      events: [
+        { description: 'Encendido de dispositivo' },
+        { description: 'Temperatura alta detectada' },
+        { description: 'Temperatura alta detectada' },
+        { description: 'Temperatura alta detectada' },
+        { description: 'Temperatura alta detectada' }
+      ]
+    },
+    {
+      date: '2024-03-14',
+      events: [
+        { description: 'Encendido de dispositivo' },
+        { description: 'Temperatura alta detectada' },
+        { description: 'Temperatura alta detectada' },
+        { description: 'Temperatura alta detectada' },
+        { description: 'Temperatura alta detectada' }
+      ]
+    },
+    {
+      date: '2024-03-13',
+      events: [
+        { description: 'Encendido de dispositivo' },
+        { description: 'Temperatura alta detectada' },
+        { description: 'Temperatura alta detectada' },
+        { description: 'Temperatura alta detectada' },
+        { description: 'Temperatura alta detectada' }
+      ]
+    }
   ];
+  filterType: any;
+  selectedDate: any;
 }
